@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --Gold-500: hsl(31, 77%, 52%);
+  --Cyan-800: hsl(184, 100%, 22%);
+  --Green-950: hsl(179, 100%, 13%);
+  --text-paragraph: hsla(0, 0%, 100%, 0.75);
+  --bg-light: hsl(0, 0%, 95%);
+}
+
+body {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-light);
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 900px;
+  margin: 1rem 0;
+}
+
+.offer-list {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.offer-elem {
+  flex: 1;
+  color: var(--text-paragraph);
+  padding: 3rem;
+}
+
+.offer-elem:nth-child(1) {
+  background: var(--Gold-500);
+  border-radius: 10px 10px 0 0;
+}
+
+.offer-elem:nth-child(2) {
+  background: var(--Cyan-800);
+}
+
+.offer-elem:nth-child(3) {
+  background: var(--Green-950);
+  border-top-right-radius: 0 0 10px 10px;
+}
+
+.offer-elem-img img {
+  max-width: 100%;
+  margin-bottom: 1rem;
+}
+
+.offer-elem-text h1 {
+  text-transform: uppercase;
+  padding: 1rem 0;
+  font-family: "Big Shoulders", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.offer-elem-text p {
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  line-height: 1.6rem;
+  padding: 1rem 0 3rem 0;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  border: 2px solid transparent;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 700;
+  font-family: "Lexend Deca", sans-serif;
+  background: var(--bg-light);
+  transition: all 0.2s ease;
+}
+
+.btn:hover {
+  background: transparent;
+  color: #fff !important;
+  border-color: #fff;
+}
+
+.btn-color1 {
+  color: var(--Gold-500);
+}
+
+.btn-color2 {
+  color: var(--Cyan-800);
+}
+.btn-color3 {
+  color: var(--Green-950);
+}
+
+@media only screen and (max-width: 768px) {
+  .offer-list {
+    flex-direction: column;
+  }
+
+  .offer-elem:nth-child(1) {
+    border-radius: 10px 0 0 10px;
+  }
+
+  .offer-elem:nth-child(3) {
+    border-radius: 0 10px 10px 0;
+  }
+}
